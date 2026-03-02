@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details – INNOVATIVE SCHOOL</title>
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+      color: #111827;
+      background: #f9fafb;
+    }
+    .container { max-width:1240px; margin:0 auto; padding:0 20px; }
+
+    header {
+      background:white;
+      border-bottom:1px solid #e5e7eb;
+      position:sticky; top:0; z-index:100;
+    }
+    .header-inner {
+      height:80px;
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    .logo { font-size:2.1rem; font-weight:800; color:#4f46e5; letter-spacing:-1px; }
+    .logo span { color:#6366f1; }
+    nav a { margin-left:36px; color:#374151; text-decoration:none; font-weight:500; }
+    nav a:hover { color:#4f46e5; }
+    .btn {
+      display:inline-block; padding:10px 24px; border-radius:10px;
+      font-weight:600; text-decoration:none; transition:all 0.2s;
+    }
+    .btn-primary { background:#4f46e5; color:white; }
+    .btn-primary:hover { background:#4338ca; }
+    .btn-outline { border:2px solid #4f46e5; color:#4f46e5; }
+    .btn-outline:hover { background:#4f46e5; color:white; }
+
+    .hero {
+      background:linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      color:white; padding:120px 0 80px; text-align:center;
+    }
+    .hero h1 { font-size:clamp(2.5rem,7vw,4rem); font-weight:800; margin-bottom:20px; }
+    .hero .meta { font-size:1.2rem; opacity:0.9; margin:24px 0; }
+    .hero .price { font-size:2.6rem; font-weight:700; margin:16px 0 32px; }
+
+    .content { padding:80px 0; }
+    .grid-2 { display:grid; grid-template-columns:1fr 320px; gap:48px; }
+    .main { line-height:1.8; }
+    .main h2 { font-size:2.2rem; margin:48px 0 24px; color:#111827; }
+    .main h3 { font-size:1.6rem; margin:36px 0 16px; }
+    .sidebar {
+      background:white; border-radius:16px; padding:32px;
+      box-shadow:0 4px 20px rgba(0,0,0,0.08); height:fit-content; position:sticky; top:100px;
+    }
+    .sidebar h3 { font-size:1.4rem; margin-bottom:20px; }
+    .sidebar ul { list-style:none; }
+    .sidebar li { margin:16px 0; color:#4b5563; }
+    .sidebar li strong { color:#111827; }
+
+    footer {
+      background:#030712; color:#9ca3af; padding:80px 0 40px; text-align:center;
+    }
+    footer a { color:#d1d5db; margin:0 16px; text-decoration:none; }
+    footer a:hover { color:white; }
+
+    @media (max-width:900px) {
+      .grid-2 { grid-template-columns:1fr; }
+      .sidebar { position:static; }
+    }
+    @media (max-width:640px) {
+      .hero { padding:80px 0 60px; }
+      .header-inner { flex-direction:column; gap:20px; height:auto; padding:20px 0; }
+      nav a { margin:0 12px; font-size:0.95rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <div class="logo">INNOVATIVE <span> SCHOOL</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="#">Pricing</a>
+      <a href="#" class="btn btn-outline">Sign In</a>
+      <a href="#" class="btn btn-primary">Enroll Now</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Python & AI Engineering 2026</h1>
+    <div class="meta">Build production-ready AI systems • From zero to agents & automation</div>
+    <div class="price">Ksh 100,199</div>
+    <a href="#" class="btn btn-primary" style="font-size:1.3rem; padding:16px 48px;">Enroll Now</a>
+  </div>
+</section>
+
+<section class="content">
+  <div class="container">
+    <div class="grid-2">
+
+      <div class="main">
+        <h2>What you'll learn</h2>
+        <ul style="padding-left:24px; margin:24px 0;">
+          <li>Modern Python (3.11+) best practices & tooling</li>
+          <li>Building AI agents & autonomous workflows</li>
+          <li>RAG pipelines, vector databases, embeddings</li>
+          <li>Fine-tuning LLMs and prompt engineering</li>
+          <li>Deployment: FastAPI, Docker, cloud functions</li>
+          <li>Real-time AI apps with WebSockets & streaming</li>
+        </ul>
+
+        <h2>Course structure</h2>
+        <p>14 weeks • 6-10 hours/week • 100% project-based</p>
+
+        <h2>Who this course is for</h2>
+        <p>Developers who want to move from traditional software engineering into AI engineering roles in 2026.</p>
+
+        <h2>Prerequisites</h2>
+        <p>Basic Python knowledge • Comfortable with command line • Git basics recommended</p>
+      </div>
+
+      <div class="sidebar">
+        <h3>Course snapshot</h3>
+        <ul>
+          <li><strong>Level:</strong> Intermediate → Advanced</li>
+          <li><strong>Duration:</strong> 14 weeks</li>
+          <li><strong>Lessons:</strong> 68 online lessons</li>
+          <li><strong>Projects:</strong> 7 major capstones</li>
+          <li><strong>Access:</strong> Lifetime + updates</li>
+          <li><strong>Certificate:</strong> Yes (completion)</li>
+          <li><strong>Price:</strong> Ksh100,199 one-time</li>
+        </ul>
+
+        <div style="margin-top:32px;">
+          <a href="#" class="btn btn-primary" style="width:100%; text-align:center; display:block; padding:14px;">Enroll for Ksh100,199</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div style="margin-bottom:40px;">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="#">Pricing</a>
+      <a href="#">For Business</a>
+      <a href="#">Blog</a>
+      <a href="#">Help</a>
+      <a href="#">About</a>
+    </div>
+    <div>© 2026 INNOVATIVE SCHOOL. All rights reserved.</div>
+  </div>
+</footer>
+    
+</body>
+</html>

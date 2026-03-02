@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my dashboard - INNOVATIVE SCHOOL</title>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: #111827;
+      background: #e21be2;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: rgb(222, 220, 231);
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: #4f46e5;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: #6366f1;
+    }
+
+    .user-area {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .user-area span {
+      font-weight: 500;
+      color: #374151;
+    }
+
+    .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #f0540b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #4f46e5;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 24px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: #faf9fc;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #4338ca;
+    }
+
+    .btn-outline {
+      border: 2px solid #4f46e5;
+      color: #4f46e5;
+    }
+
+    .btn-outline:hover {
+      background: #96267a;
+      color: white;
+    }
+
+    .dashboard {
+      padding: 48px 0 80px;
+    }
+
+    .welcome {
+      margin-bottom: 48px;
+    }
+
+    .welcome h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .welcome p {
+      font-size: 1.25rem;
+      color: #4b5563;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 32px;
+      margin-bottom: 64px;
+    }
+
+    .card {
+      background: rgb(243, 240, 247);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      font-size: 1.45rem;
+      margin-bottom: 20px;
+      color: #111827;
+    }
+
+    .progress-circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: conic-gradient(#4f46e5 0% 68%, #e5e7eb 68% 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .progress-circle-inner {
+      width: 100px;
+      height: 100px;
+      background: rgb(250, 8, 8);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #4f46e5;
+    }
+
+    .progress-text {
+      text-align: center;
+      color: #6b7280;
+      font-size: 0.95rem;
+    }
+
+    .course-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .course-item:last-child {
+      border-bottom: none;
+    }
+
+    .course-thumbnail {
+      width: 80px;
+      height: 60px;
+      background: #09f76c;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .course-info h4 {
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+    }
+
+    .course-info .meta {
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    .course-progress {
+      height: 6px;
+      background: #e5e7eb;
+      border-radius: 3px;
+      margin-top: 12px;
+      overflow: hidden;
+    }
+
+    .course-progress-bar {
+      height: 100%;
+      background: #4f46e5;
+      width: 68%;
+    }
+
+    .recent-activity {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+    }
+
+    .activity-item {
+      padding: 20px 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .activity-item:last-child {
+      border-bottom: none;
+    }
+
+    .activity-time {
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-top: 4px;
+    }
+
+    footer {
+      background: #030712;
+      color: #9ca3af;
+      padding: 60px 0 40px;
+      text-align: center;
+      font-size: 0.95rem;
+      margin-top: 80px;
+    }
+
+    footer a {
+      color: #d1d5db;
+      margin: 0 16px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    @media (max-width: 900px) {
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .header-inner {
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        padding: 20px 0;
+      }
+      .welcome h1 {
+        font-size: 2.2rem;
+      }
+      nav a {
+        margin: 0 12px;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <div class="logo">INNOVATIVE <span> SCHOOL</span></div>
+
+    <div class="user-area">
+      <span>Emilio</span>
+      <div class="avatar">EO</div>
+    </div>
+  </div>
+</header>
+
+<section class="dashboard">
+  <div class="container">
+
+    <div class="welcome">
+      <h1>Welcome back, Emilio</h1>
+      <p>Here's what's happening in your learning journey</p>
+    </div>
+
+    <div class="grid-3">
+
+      <div class="card">
+        <h3>Your Progress</h3>
+        <div class="progress-circle">
+          <div class="progress-circle-inner">68%</div>
+        </div>
+        <div class="progress-text">
+          Overall course completion<br>
+          4 active courses • 2 completed
+        </div>
+      </div>
+      <div class="card">
+        <h3>Active Courses</h3>
+        <div class="course-item">
+          <div class="course-thumbnail"></div>
+          <div class="course-info">
+            <h4>Python & AI Engineering 2026</h4>
+            <div class="meta">Week 8 of 14</div>
+            <div class="course-progress"><div class="course-progress-bar" style="width:68%"></div></div>
+          </div>
+        </div>
+        <div class="course-item">
+          <div class="course-thumbnail"></div>
+          <div class="course-info">
+            <h4>UI/UX Design & Figma Masterclass</h4>
+            <div class="meta">Week 5 of 10</div>
+            <div class="course-progress"><div class="course-progress-bar" style="width:52%"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Recent Activity</h3>
+        <div class="activity-item">
+          <strong>Completed: Project - AI Agent Workflow</strong>
+          <div class="activity-time">2 days ago</div>
+        </div>
+        <div class="activity-item">
+          <strong>Watched: Lesson 24 - RAG Implementation</strong>
+          <div class="activity-time">Yesterday at 3:42 PM</div>
+        </div>
+        <div class="activity-item">
+          <strong>Started: Module 7 - Deployment & Scaling</strong>
+          <div class="activity-time">Today at 11:15 AM</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="recent-activity">
+      <h3>Continue Learning</h3>
+      <div class="course-item" style="padding:32px 0 0;">
+        <div class="course-thumbnail" style="width:140px; height:100px;"></div>
+        <div class="course-info">
+          <h4>Python & AI Engineering 2026</h4>
+          <div class="meta">Last watched: Lesson 25 - Streaming Responses</div>
+          <div class="course-progress"><div class="course-progress-bar" style="width:68%"></div></div>
+          <div style="margin-top:20px;">
+            <a href="#" class="btn btn-primary">Continue Course</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div style="margin-bottom:32px;">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="#">My Learning</a>
+      <a href="#">Help</a>
+      <a href="#">About</a>
+    </div>
+    <div>© 2026 INNOVATIVE SCHOOL. All rights reserved.</div>
+  </div>
+</footer>
+    
+</body>
+</html>
