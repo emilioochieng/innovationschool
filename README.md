@@ -1,43 +1,58 @@
-# 🎓 Innovation School
+# Innovation School
 
-**Innovation School** is a robust, scalable backend engine and online learning platform designed to manage digital classrooms, course delivery, and student-teacher data streams. Built with modern backend architectures, it provides a seamless API layer to handle real-time education management.
+A modern, multi-page educational website built to showcase the activities, programs, and offerings of **Innovation School**.
 
----
-
-## 🚀 Core Features
-
-*   **Role-Based Access Control (RBAC):** Strict security layers differentiating permissions for Students, Teachers, and Administrators.
-*   **Course & Content Management:** Complete CRUD system for creating courses, uploading learning materials, and assigning tasks.
-*   **Enrollment Pipeline:** Automated processing for student course enrollment and grading systems.
-*   **Secure Authentication:** User data protection via JWT (JSON Web Tokens) and encrypted password hashing.
-*   **Database Management:** Optimized queries ensuring data integrity across user records and academic analytics.
+**Live Website**: (https://emilioochieng.github.io/innovationschool.html/)
 
 ---
 
-## 🛠️ Architecture & Tech Stack
+## Project Description
 
-This project is built with strong emphasis on backend separation of concerns and version control.
+Innovation School is a fully responsive, professional school website designed to present an innovative learning institution. The site features a complete user journey — from browsing courses and pricing to signing up, logging in, and accessing a personalized dashboard.
 
-*   **Runtime Environment:** Node.js / Python
-*   **Backend Framework:** Express.js / FastAPI
-*   **Database Engine:** PostgreSQL (Relational data) or MongoDB (NoSQL)
-*   **Authentication & Security:** JWT, bcrypt
-*   **Version Control & Deployment:** Git, GitHub, Docker
+It serves as a comprehensive digital presence for the school, highlighting its academic programs, vision, and engagement opportunities.
 
 ---
 
-## 📦 Project Directory Structure
+##  Key Features
 
-```text
-innovation-school/
-├── index/             # Database configurations and environment variables
-├──about/        # Request handling logic (API logic controllers)
-├── course/         # Auth guards, validation, and error-handling
-├── course-details/             # Database schemas & structural design
-├── dashboard/             # Express/FastAPI endpoint definitions
-├── contact/              # Unit and integration test suites
-├── dashboard          # Version control exclusions
-├── README.md           # Project documentation
-└── logins           # Application entry point
+- **9 Fully Functional Pages**:
+  - `index.html` – Homepage
+  - `about.html` – About the school
+  - `courses.html` – Course listings
+  - `coursedetails.html` – Individual course information
+  - `pricing.html` – Tuition and plans
+  - `signup.html` – User registration
+  - `login.html` – User authentication
+  - `dashboard.html` – Student/ user dashboard
+  - `contact.html` – Contact & inquiries
 
+- Clean and modern design using **Tailwind CSS**
+- Fully responsive across all devices
+- Consistent navigation and user-friendly interface
+- Structured information architecture
+
+---
+
+##  Technologies Used
+
+- **HTML5**
+- **Tailwind CSS**
+- **Vanilla CSS**
+- **JavaScript** (for interactivity)
+
+---
+
+## Setup & Installation
+
+### Run Locally
+
+```bash
+# Clone the repository
+git clone https://github.com/emilioochieng/innovationschool.html.git
+
+# Navigate into the project directory
+cd innovationschool.html
+
+# Open index.html in your browser
 
